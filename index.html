@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dark-theme.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>
+    <script src="./question_1.js"></script>
+
+    <title>Nanomaterials Project</title>
+</head>
+
+<body>
+    <div class="bg-container">
+        <div class="container content-wrapper">
+            <div class="text-center header">
+                <h2 class="course-title">PH401 - Introduction to Nanomaterials</h2>
+                <h3>
+                    <span class="subtitle">Assignment: Code for</span>
+                    <span class="question-no">Question 1</span>
+                </h3>
+                <h4>
+                    <span class="student-name">Anshu Nauwala</span> (Roll no. <span class="roll-no">2101CS10</span>), 
+                    <span class="student-name">Yogesh Kumar</span> (Roll no. <span class="roll-no">2101CB61</span>), 
+                    <span class="student-name">Prince Kumar</span> (Roll no. <span class="roll-no">2101CS62</span>), 
+                    <span class="student-name">Abhijeet Kotwal</span> (Roll no. <span class="roll-no">2101CB62</span>)
+                </h4>
+            </div>
+            <br>
+
+            <h3 class="question-no">Question 1:</h3>
+            <h5 class="question">
+                Write a computer program to deduce the total number of atoms and surface atoms for different shells of 
+                cuboctahedral/spherical shapes. Plot % of atoms in bulk/surface versus particle size. The user should get an idea 
+                to generate the thickness or size of the nanoparticle for a particular application (optical/electrical/magnetic/strength).
+            </h5>
+
+            <h3 class="question-no" style="display: inline;">Answer:</h3>
+            <a class="readme btn btn-info" onclick="window.open('https://github.com/Mintellect310/ph401-1801cs31_1801cs32_1801cs33/blob/main/README.md', '_blank')">
+                View README
+            </a>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="question">
+                        <h4>Select a shape:</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shape" id="cuboctahedral" value="Cuboctahedral">
+                            <label class="form-check-label" for="cuboctahedral">Cuboctahedral</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shape" id="spherical" value="Spherical">
+                            <label class="form-check-label" for="spherical">Spherical</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h4>Select an application:</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="application" id="optical" value="Optical" onclick="autoSize()">
+                            <label class="form-check-label" for="optical">Optical</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="application" id="electrical" value="Electrical" onclick="autoSize()">
+                            <label class="form-check-label" for="electrical">Electrical</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="application" id="magnetic" value="Magnetic" onclick="autoSize()">
+                            <label class="form-check-label" for="magnetic">Magnetic</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="application" id="strength" value="Strength" onclick="autoSize()">
+                            <label class="form-check-label" for="strength">Strength</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="application" id="none" value="None" onclick="autoSize()">
+                            <label class="form-check-label" for="none">None</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h4>Specify the limits for particle size:</h4>
+                        <div class="form-group">
+                            <label for="min_particle_size">Minimum:</label>
+                            <input type="number" id="min_particle_size" class="form-control" min="1" value="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="max_particle_size">Maximum:</label>
+                            <input type="number" id="max_particle_size" class="form-control" min="1" value="50">
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary button1" onclick="draw()">Draw Graph!</button>
+                </div>
+
+                <div class="col-md-6">
+                    <h5 id="results"></h5>
+                    <div id="finalPlot" class="graph-container">
+                        <!-- Graph will be rendered here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

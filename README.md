@@ -11,7 +11,7 @@
 | Abhijeet Kotwal  | 2101CB61 |
 
 ## Project Link
-[Click here](http://nano-mnn.herokuapp.com/) to view the project
+[Click here](https://674c6924e88c34b4c9e40069--shimmering-marigold-bc982a.netlify.app/) to view the project
 
 ## Tech Stack
 - HTML

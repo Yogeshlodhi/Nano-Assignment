@@ -1,6 +1,6 @@
 # Nanomaterials Assignment
 
-**Note**: Open [index.html](./index.html) in browser to view the project from this folder, otherwise [click here](https://674c6924e88c34b4c9e40069--shimmering-marigold-bc982a.netlify.app/)
+**Note**: Open [index.html](./index.html) in browser to view the project from this folder, otherwise [click here](https://nano-project.netlify.app/)
 
 ## Students
 | Names            | Roll No. |
@@ -11,7 +11,7 @@
 | Abhijeet Kotwal  | 2101CB61 |
 
 ## Project Link
-[Click here](https://674c6924e88c34b4c9e40069--shimmering-marigold-bc982a.netlify.app/) to view the project
+[Click here](https://nano-project.netlify.app/) to view the project
 
 ## Tech Stack
 - HTML

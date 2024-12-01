@@ -1,6 +1,6 @@
 # Nanomaterials Assignment
 
-**Note**: Open [index.html](./index.html) in browser to view the project from this folder, otherwise [click here](http://nano-mnn.herokuapp.com/)
+**Note**: Open [index.html](./index.html) in browser to view the project from this folder, otherwise [click here](https://674c6924e88c34b4c9e40069--shimmering-marigold-bc982a.netlify.app/)
 
 ## Students
 | Names            | Roll No. |
